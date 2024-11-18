@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class', // Enables dark mode using the 'class' strategy
   theme: {
     extend: {
       colors: {
@@ -16,7 +17,14 @@ export default {
           800: '#075985',
           900: '#0c4a6e',
         },
-        background: '#f8fafc',
+        background: {
+          light: '#f8fafc', // Light mode background
+          dark: '#0f172a', // Dark mode background (darker shade)
+        },
+        text: {
+          light: '#1e293b', // Light mode text color
+          dark: '#0f172a', // Dark mode text color (matches dark background)
+        },
       },
     },
   },
